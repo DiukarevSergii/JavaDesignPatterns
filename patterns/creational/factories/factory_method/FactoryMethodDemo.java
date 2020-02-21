@@ -13,6 +13,7 @@ class Point {
         this.y = y;
     }
 
+    // please don't do it like this
     public Point(double a,
                  double b, // names do not communicate intent
                  CoordinateSystem cs) {
@@ -59,9 +60,15 @@ class PointFactory {
 
 class FactoryMethodDemo {
     public static void main(String[] args) {
+        // ugly implementation
         Point point = new Point(2, 3, CoordinateSystem.CARTESIAN);
-        Point origin = Point.ORIGIN;
 
+        // factory method implementation
+        Point origin = Point.ORIGIN;
+        Point newCartesianPoint = Point.newCartesianPoint(2,3);
+        Point newPolarPoint = Point.newPolarPoint(2,3);
+
+        //  segregation
         Point point1 = Point.Factory.newCartesianPoint(1, 2);
     }
 }
