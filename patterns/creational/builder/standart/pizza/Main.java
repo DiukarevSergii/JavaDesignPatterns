@@ -1,7 +1,7 @@
-package patterns.builder.standart.pizza;
+package patterns.creational.builder.standart.pizza;
 
-import static patterns.builder.standart.pizza.NyPizza.Size.SMALL;
-import static patterns.builder.standart.pizza.Pizza.Topping.*;
+import static patterns.creational.builder.standart.pizza.NyPizza.Size.SMALL;
+import static patterns.creational.builder.standart.pizza.Pizza.Topping.*;
 
 public class Main {
     public static void main(String[] args) {

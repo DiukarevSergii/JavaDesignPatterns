@@ -1,4 +1,4 @@
-package patterns.builder.fluent;
+package patterns.creational.builder.fluent;
 
 // builder inheritance with recursive generics
 

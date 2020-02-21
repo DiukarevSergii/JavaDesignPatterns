@@ -1,4 +1,4 @@
-package patterns.singleton;
+package patterns.creational.singleton;
 
 // Enum singleton - the preferred approach
 public enum ElvisEnum {

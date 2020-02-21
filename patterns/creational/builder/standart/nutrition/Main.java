@@ -1,4 +1,4 @@
-package patterns.builder.standart.nutrition;
+package patterns.creational.builder.standart.nutrition;
 
 public class Main {
     public static void main(String[] args) {

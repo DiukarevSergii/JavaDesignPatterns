@@ -1,4 +1,4 @@
-package patterns.factories.factory_method;
+package patterns.creational.factories.factory_method;
 
 enum CoordinateSystem {
     CARTESIAN,

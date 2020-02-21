@@ -1,4 +1,4 @@
-package patterns.singleton;
+package patterns.creational.singleton;
 
 // Singleton with static factory
 public class ElvisClass {

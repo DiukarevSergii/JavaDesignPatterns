@@ -1,4 +1,4 @@
-package patterns.builder.standart.pizza;
+package patterns.creational.builder.standart.pizza;
 
 import java.util.Objects;
 

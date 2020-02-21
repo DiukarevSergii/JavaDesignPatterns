@@ -1,4 +1,4 @@
-package patterns.builder.standart.nutrition;
+package patterns.creational.builder.standart.nutrition;
 
 // Builder Pattern
 @SuppressWarnings("ALL")

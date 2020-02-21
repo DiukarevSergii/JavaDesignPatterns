@@ -1,4 +1,4 @@
-package patterns.factories.dynamic_abstract_factory;
+package patterns.creational.factories.dynamic_abstract_factory;
 
 import org.reflections.Reflections;
 
@@ -68,13 +68,13 @@ class HotDrinkMachine {
         for (AvailableDrink drink : AvailableDrink.values()) {
             String s = drink.toString();
             String factoryName = "" + Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase();
-            Class<?> factory = Class.forName("patterns.factories.dynamic_abstract_factory." + factoryName + "Factory");
+            Class<?> factory = Class.forName("patterns.creational.factories.dynamic_abstract_factory." + factoryName + "Factory");
             factories.put(drink, (AbstractHotDrinkFactory) factory.getDeclaredConstructor().newInstance());
         }
 
         // option 2: find all implementors of IHotDrinkFactory
         Set<Class<? extends AbstractHotDrinkFactory>> types =
-                new Reflections("patterns.factories.dynamic_abstract_factory") // ""
+                new Reflections("patterns.creational.factories.dynamic_abstract_factory") // ""
                         .getSubTypesOf(AbstractHotDrinkFactory.class);
         for (Class<? extends AbstractHotDrinkFactory> type : types) {
             namedFactories.add(new AbstractMap.SimpleEntry<>(

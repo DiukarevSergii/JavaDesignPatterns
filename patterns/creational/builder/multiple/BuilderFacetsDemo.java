@@ -1,4 +1,4 @@
-package patterns.builder.multiple;
+package patterns.creational.builder.multiple;
 
 class Person {
     // address
