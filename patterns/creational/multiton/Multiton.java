@@ -43,6 +43,7 @@ public class Multiton {
         System.out.println("\nprimary     == auxiliary1 ? : " + (primary == auxiliary1));
         System.out.println("auxiliary1  == auxiliary2 ? : " + (auxiliary1 == auxiliary2));
         System.out.println("auxiliary1  == auxiliary3 ? : " + (auxiliary1 == auxiliary2));
+        System.out.println("auxiliary2  == auxiliary4 ? : " + (auxiliary2 == auxiliary4));
         System.out.println("fallback    == auxiliary3 ? : " + (fallback == auxiliary3));
         System.out.println("primary     == fallback   ? : " + (primary == fallback));
 
