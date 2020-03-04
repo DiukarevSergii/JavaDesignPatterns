@@ -1,4 +1,4 @@
-package patterns.creational.singleton.multiton;
+package patterns.creational.multiton;
 
 
 import java.util.HashMap;
@@ -18,12 +18,12 @@ class Printer {
                 instanceCount + " instances created so far.");
     }
 
-    private static HashMap<Subsystem, Printer>
-            instances = new HashMap<>();
+    private static HashMap<Subsystem, Printer> instances = new HashMap<>();
 
     public static Printer get(Subsystem ss) {
-        if (instances.containsKey(ss))
+        if (instances.containsKey(ss)) {
             return instances.get(ss);
+        }
 
         Printer instance = new Printer();
         instances.put(ss, instance);
