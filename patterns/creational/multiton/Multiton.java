@@ -33,8 +33,18 @@ class Printer {
 
 public class Multiton {
     public static void main(String[] args) {
-        Printer main = Printer.get(Subsystem.PRIMARY);
-        Printer aux = Printer.get(Subsystem.AUXILIARY);
-        Printer aux2 = Printer.get(Subsystem.AUXILIARY);
+        Printer primary = Printer.get(Subsystem.PRIMARY);
+        Printer auxiliary1 = Printer.get(Subsystem.AUXILIARY);
+        Printer auxiliary2 = Printer.get(Subsystem.AUXILIARY);
+        Printer auxiliary3 = Printer.get(Subsystem.AUXILIARY);
+        Printer auxiliary4 = Printer.get(Subsystem.AUXILIARY);
+        Printer fallback = Printer.get(Subsystem.FALLBACK);
+
+        System.out.println("\nprimary     == auxiliary1 ? : " + (primary == auxiliary1));
+        System.out.println("auxiliary1  == auxiliary2 ? : " + (auxiliary1 == auxiliary2));
+        System.out.println("auxiliary1  == auxiliary3 ? : " + (auxiliary1 == auxiliary2));
+        System.out.println("fallback    == auxiliary3 ? : " + (fallback == auxiliary3));
+        System.out.println("primary     == fallback   ? : " + (primary == fallback));
+
     }
 }
